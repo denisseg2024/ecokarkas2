@@ -1,88 +1,105 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Эко Каркас</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
+        .about, .services, .contact {
+            background-color: white;
+            margin: 20px 0;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
-        header {
+        h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .about p, .services ul, .contact p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .services ul {
+            list-style: none;
+            padding: 0;
+        }
+        .services li {
+            background: #f1f1f1;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact input, .contact textarea {
+            padding: 15px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+        }
+        .contact button {
+            padding: 15px;
             background-color: #2e8b57;
             color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        nav {
-            background-color: #3a3a3a;
-            color: white;
-            padding: 10px;
-            display: flex;
-            justify-content: center;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-        nav a:hover {
-            text-decoration: underline;
-        }
-        section {
-            padding: 20px;
-            margin: 10px;
-            background-color: white;
+            border: none;
             border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            font-size: 1.1em;
+        }
+        .contact button:hover {
+            background-color: #3e9e6b;
         }
         footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #2e8b57;
+            background-color: #333;
             color: white;
-            margin-top: 20px;
+            padding: 20px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Добро пожаловать в Эко Каркас</h1>
-        <p>Создаем дома, которые заботятся о природе и вашем уюте!</p>
+        <h1>Эко Каркас</h1>
+        <p>Строим дома, которые заботятся о природе и вашем уюте</p>
     </header>
+    
     <nav>
         <a href="#about">О компании</a>
         <a href="#services">Услуги</a>
         <a href="#contact">Контакты</a>
     </nav>
-    <section id="about">
-        <h2>О компании</h2>
-        <p>Наша миссия — строить экологичные дома, сохраняя природу вокруг нас. Мы используем современные технологии и безопасные материалы.</p>
-    </section>
-    <section id="services">
-        <h2>Услуги</h2>
-        <ul>
-            <li>Проектирование и строительство домов</li>
-            <li>Модульные бани</li>
-            <li>Отделка металлическим сайдингом</li>
-        </ul>
-    </section>
-    <section id="contact">
-        <h2>Контакты</h2>
-        <p>📱 +7 (993) 270-72-72</p>
-        <p>📱 +7 (993) 270-73-73</p>
-        <p>📧 ecokarkas24@yandex.ru</p>
-        <form>
-            <label for="name">Ваше имя:</label><br>
-            <input type="text" id="name" name="name" required><br><br>
-            <label for="message">Ваше сообщение:</label><br>
-            <textarea id="message" name="message" rows="4" required></textarea><br><br>
-            <button type="submit">Отправить</button>
-        </form>
-    </section>
+
+    <div class="hero">
+        <h2>Ваш идеальный дом начинается здесь</h2>
+    </div>
+
+    <div class="container">
+        <section id="about" class="about">
+            <h2>О компании</h2>
+            <p>Мы — компания "Эко Каркас", специализирующаяся на строительстве экологичных и долговечных домов. Наши проекты сочетают в себе инновационные технологии и внимание к окружающей среде.</p>
+        </section>
+
+        <section id="services" class="services">
+            <h2>Наши услуги</h2>
+            <ul>
+                <li>Проектирование и строительство домов</li>
+                <li>Модульные бани</li>
+                <li>Отделка металлическим сайдингом</li>
+                <li>Строительство с использованием свайных фундаментов</li>
+            </ul>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Контакты</h2>
+            <p>Свяжитесь с нами:</p>
+            <p>📱 +7 (993) 270-72-72</p>
+            <p>📧 ecokarkas24@yandex.ru</p>
+            <form>
+                <input type="text" id="name" name="name" placeholder="Ваше имя" required>
+                <textarea id="message" name="message" rows="5" placeholder="Ваше сообщение" required></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+    </div>
+
     <footer>
         <p>&copy; 2024 Эко Каркас. Все права защищены.</p>
     </footer>
